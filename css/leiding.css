@@ -1,0 +1,96 @@
+/* Main content styles */
+main .intro,
+main .outro {
+  width: auto;
+  max-width: 1200px;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+}
+main .leiding-tak {
+  margin-bottom: 2rem;
+}
+main h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+main .leiding-lijst {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  background-image: url('../img/bg-texture.webp');
+  width: auto;
+  max-width: 1200px;
+  border-radius: 50px;
+  padding: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+main .leiding-info img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+main .progressive {
+  width: 100%;
+  height: auto;
+  filter: blur(5px);
+  transition: filter 0.5s ease-in-out;
+}
+main .loaded {
+  filter: blur(0);
+}
+main .leiding-info p {
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+main .outro {
+  border-top: 1px solid var(--secondary-shadow-color);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  main p {
+    font-size: 0.95em;
+  }
+  main .leiding-lijst {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  main .leiding-lijst {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .leiding-lijst {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .intro h1,
+  main .outro h1 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+  main .intro p,
+  main .intro,
+  main .outro p,
+  main.outro {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    line-height: 1.3;
+  }
+  main p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+  main h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}

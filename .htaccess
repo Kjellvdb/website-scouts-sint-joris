@@ -1,0 +1,42 @@
+# ========================================
+# Scouts Sint-Joris Aalst - .htaccess
+# ========================================
+
+RewriteEngine On
+
+# ------------------------------------------------
+# Allow access to sendmail.php (Apache 2.4)
+# ------------------------------------------------
+<Files "sendmail.php">
+  Require all granted
+</Files>
+
+# ------------------------------------------------
+# Force HTTPS + non-www (canonical)
+# ------------------------------------------------
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.scoutssintjoris\.be$ [NC]
+RewriteRule ^(.*)$ https://scoutssintjoris.be/$1 [R=301,L]
+
+# ------------------------------------------------
+# Redirect /index.html to /
+# ------------------------------------------------
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ------------------------------------------------
+# Canonical: force .html in URLs
+# ------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [R=301,L]
+
+# ------------------------------------------------
+# Internally serve .html without showing it
+# ------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ========================================
+# End
+# ========================================

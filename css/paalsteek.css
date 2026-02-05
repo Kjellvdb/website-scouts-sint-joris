@@ -1,0 +1,97 @@
+/* Main content styles */
+main .intro {
+  max-width: 1200px;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+}
+main .paalsteek-overzicht {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+main .paalsteek-tak {
+  background-image: url('../img/bg-texture.webp');
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+main .paalsteek-tak h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+main .paalsteek-tak p {
+  text-align: justify;
+  font-weight: normal;
+}
+main .paalsteek-tak a {
+  font-weight: 500;
+  color: var(--primary-green-color);
+  text-decoration: none;
+}
+main .paalsteek-tak a:hover {
+  text-decoration: underline;
+}
+main .agenda {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+}
+main .agenda-intro {
+  max-width: 900px;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+}
+main .agenda h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+main .agenda-embed {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  max-height: 600px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 4px 10px var(--primary-shadow-color),
+    0 8px 25px var(--secondary-shadow-color);
+  background-color: var(--google-agenda-color);
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  main p {
+    font-size: 0.95em;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    max-width: 450px;
+  }
+  main .paalsteek-overzicht {
+    grid-template-columns: 1fr;
+  }
+  main .paalsteek-tak {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  main iframe {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .intro h1 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+  main .intro p,
+  main .intro {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    line-height: 1.3;
+  }
+  main p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+  main h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}

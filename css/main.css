@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family:
+    'Google Sans',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  color: var(--primary-text-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font Styles */
+:root {
+  --primary-text-color: #2e2e2e;
+  --secondary-text-color: black;
+  --white-text-color: #ffffff;
+  --primary-green-color: #7b8f1c;
+  --secondary-green-color: #2f6b2f;
+  --primary-red-color: #c0392b;
+  --primary-background-color: #fff;
+  --secondary-background-color: #f2f2f2;
+  --primary-shadow-color: rgba(51, 50, 50, 0.05);
+  --secondary-shadow-color: rgba(0, 0, 0, 0.1);
+  --google-agenda-color: #f0f4f9;
+  --form-border-color: #ccc;
+  --carousel-primary-button-color: rgba(0, 0, 0, 0.45);
+  --carousel-secondary-button-color: rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-text-color);
+  font-family:
+    'Bebas Neue',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-text-color);
+  font-family:
+    'Bebas Neue',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+/* Navigation Bar Styles */
+nav {
+  width: 100%;
+  height: 60px;
+  font-weight: 500;
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-shadow:
+    0 4px 6px var(--primary-shadow-color),
+    0 5px 15px var(--secondary-shadow-color);
+}
+nav .logo {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 15px;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-text-color);
+  border-radius: 2px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav li {
+  padding: 20px;
+  background-color: var(--secondary-background-color);
+}
+nav .active {
+  background-color: var(--primary-background-color);
+}
+nav a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--primary-green-color);
+}
+nav .admin {
+  height: 40px;
+  width: auto;
+  margin: auto 15px auto auto;
+}
+nav .admin img {
+  height: 100%;
+  width: auto;
+}
+
+/* Main Content Styles */
+main {
+  padding: 4rem 1.5rem;
+  padding-top: 0;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+}
+
+/* Footer Styles */
+.footer-divider {
+  background: linear-gradient(
+    to bottom,
+    rgba(123, 143, 28, 0) 0%,
+    rgba(123, 143, 28, 0.15) 40%,
+    rgba(123, 143, 28, 0.4) 65%,
+    rgba(123, 143, 28, 0.7) 85%,
+    var(--primary-green-color) 100%
+  );
+}
+footer img {
+  width: 100%;
+  height: auto;
+}
+footer section {
+  background-color: var(--primary-green-color);
+  padding: 2rem 0;
+}
+.footer-box {
+  background-image: url('../img/bg-texture.webp');
+  max-width: 75%;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+.footer-left p {
+  margin-bottom: 0.3rem;
+}
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-left lord-icon {
+  flex-shrink: 0;
+}
+.footer-left a {
+  color: var(--primary-green-color);
+  text-decoration: none;
+}
+.footer-left a:hover {
+  text-decoration: underline;
+}
+.footer-left .note {
+  font-size: 0.85rem;
+  color: var(--primary-red-color);
+  font-style: italic;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+.footer-right iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 6px var(--primary-shadow-color),
+    0 5px 15px var(--secondary-shadow-color);
+}
+.footer-bottom {
+  border-top: 1px solid var(--secondary-shadow-color);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 0;
+  text-align: center;
+}
+.privacy {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  color: var(--white-text-color);
+  background-color: var(--primary-green-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+.privacy:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px var(--secondary-shadow-color);
+}
+.footer-bottom a:last-of-type {
+  display: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 870px) {
+  .hamburger {
+    display: flex;
+    margin: auto 15px auto 15px;
+  }
+  nav ul.nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--primary-background-color);
+    display: none;
+    box-shadow:
+      0 4px 6px var(--primary-shadow-color),
+      0 5px 15px var(--secondary-shadow-color);
+  }
+  nav ul.nav-links.active {
+    display: flex;
+  }
+  nav li {
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    background-color: var(--secondary-background-color);
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  nav .admin {
+    display: block;
+    margin: auto 15px auto auto;
+  }
+}
+@media screen and (max-width: 770px) {
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  .footer-left {
+    text-align: center;
+  }
+  .icon-wrapper {
+    justify-content: center;
+  }
+}
