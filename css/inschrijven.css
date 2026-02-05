@@ -1,0 +1,95 @@
+/* Main content styles */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+main .intro {
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+}
+main .jaar {
+  display: inline;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-text-color);
+  font-family:
+    'Bebas Neue',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+main h2 {
+  margin-bottom: 1rem;
+}
+main section {
+  background-image: url('../img/bg-texture.webp');
+  border-left: 5px solid var(--primary-color);
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  box-shadow:
+    0 4px 6px var(--primary-shadow-color),
+    0 5px 15px var(--secondary-shadow-color);
+  border-radius: 6px;
+}
+main ul {
+  margin: 1rem 0 1rem 2rem;
+}
+main li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+main .rekeningnummer {
+  font-size: 1.2rem;
+  background: var(--secondary-background-color);
+  padding: 0.75rem 1rem;
+  display: inline-block;
+  border-radius: 15px;
+  margin: 0.5rem 0 1rem 0;
+}
+main .inschrijven {
+  display: inline-block;
+  margin-top: 1rem;
+}
+main a {
+  color: var(--primary-green-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+main a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  main p {
+    font-size: 0.95em;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    max-width: 500px;
+  }
+  main .jaar {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .intro h1,
+  main .intro .jaar {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+  main .intro p,
+  main .intro {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    line-height: 1.3;
+  }
+  main p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+  main h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}

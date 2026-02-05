@@ -1,0 +1,195 @@
+/* Main content styles */
+main .intro {
+  max-width: 1200px;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+}
+main .takken-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+main .tak {
+  display: flex;
+  gap: 1.5rem;
+  background-image: url('../img/bg-texture.webp');
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+main .tak img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(8deg);
+  }
+  45% {
+    transform: rotate(-6deg);
+  }
+  60% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+main .tak img:hover {
+  animation: wiggle 0.5s ease;
+  transition: transform 0.3s ease;
+}
+main .tak-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+main .tak-content h2 span {
+  font-weight: normal;
+  font-size: 0.9em;
+}
+main .tak-content p {
+  text-align: justify;
+}
+main .tak-content p:last-child {
+  margin-top: 1rem;
+}
+main .tak-links a {
+  font-weight: 500;
+  color: var(--primary-green-color);
+  text-decoration: none;
+}
+main .tak-links a:hover {
+  text-decoration: underline;
+}
+main .takken-carousel {
+  margin-top: 5rem;
+  text-align: center;
+}
+main .takken-carousel h2 {
+  margin-bottom: 2rem;
+}
+main .carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .carousel-track-wrapper {
+  overflow: hidden;
+  height: clamp(260px, 45vw, 420px);
+  border-radius: 1rem;
+  box-shadow:
+    0 4px 6px var(--primary-shadow-color),
+    0 5px 15px var(--secondary-shadow-color);
+}
+main .carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .carousel-slide {
+  min-width: 100%;
+  height: clamp(260px, 45vw, 420px);
+}
+main .carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+main .progressive {
+  width: 100%;
+  height: auto;
+  filter: blur(5px);
+  transition: filter 0.5s ease-in-out;
+}
+main .loaded {
+  filter: blur(0);
+}
+main .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--carousel-primary-button-color);
+  color: var(--white-text-color);
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.2s ease;
+}
+main .carousel-btn:hover {
+  background-color: var(--carousel-secondary-button-color);
+}
+main .carousel-btn.prev {
+  left: 10px;
+}
+main .carousel-btn.next {
+  right: 10px;
+}
+main .takken-carousel p {
+  margin-top: 1rem;
+}
+main small {
+  text-align: center;
+  display: block;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  main p {
+    font-size: 0.95em;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    max-width: 500px;
+  }
+  main .takken-grid {
+    grid-template-columns: 1fr;
+  }
+  main .tak {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  main .tak img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .intro h1 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+  main .intro p,
+  main .intro {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    line-height: 1.3;
+  }
+  main p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+  main h2 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .carousel-btn {
+    font-size: 1.6rem;
+  }
+}
