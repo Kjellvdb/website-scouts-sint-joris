@@ -33,6 +33,7 @@ main section {
     0 4px 6px var(--primary-shadow-color),
     0 5px 15px var(--secondary-shadow-color);
   border-radius: 6px;
+  text-align: justify;
 }
 main ul {
   margin: 1rem 0 1rem 2rem;
@@ -48,6 +49,17 @@ main .rekeningnummer {
   display: inline-block;
   border-radius: 15px;
   margin: 0.5rem 0 1rem 0;
+}
+main .fiscale-waarschuwing {
+  background-color: var(--warning-text-color);
+  border-left: var(--warning-background-color);
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+main .fiscale-waarschuwing p {
+  line-height: 1.5;
+  padding-top: 0.5rem;
 }
 main .inschrijven {
   display: inline-block;
@@ -91,5 +103,8 @@ main a:hover {
   }
   main h2 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+  main h3 {
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
   }
 }
