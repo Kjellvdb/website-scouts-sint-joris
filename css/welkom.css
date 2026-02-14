@@ -53,6 +53,14 @@ main .lead {
   font-size: 1.1rem;
   font-weight: 500;
 }
+main .campfire {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.2em;
+  margin: 0 0.2em;
+  line-height: 1;
+}
 main .signature {
   font-style: italic;
 }
