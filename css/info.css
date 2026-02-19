@@ -15,6 +15,9 @@ main .faq-question {
   width: 100%;
   text-align: left;
   background-image: url('../img/bg-texture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 1rem;
   border: none;
   padding: 1em;

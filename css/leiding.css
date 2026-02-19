@@ -18,6 +18,9 @@ main .leiding-lijst {
   flex-direction: row;
   gap: 3rem;
   background-image: url('../img/bg-texture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: auto;
   max-width: 1200px;
   border-radius: 50px;
