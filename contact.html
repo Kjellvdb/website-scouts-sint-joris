@@ -1,15 +1,7 @@
 <!doctype html>
 <html lang="nl">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-36VM52FBKX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-36VM52FBKX');
-    </script>
+    <link rel="stylesheet" href="https://cdn.widgets.vlaanderen.be/2.x/vlaanderen-ui.css" />
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
     <meta charset="UTF-8" />
@@ -242,12 +234,48 @@
           </div>
 
           <div class="footer-bottom">
-            <a href="pdf/Privacyverklaring Scouts Sint-Joris.pdf" target="_blank" class="privacy">Privacyverklaring</a>
+            <a href="pdf/Privacyverklaring%20Scouts%20Sint-Joris.pdf" target="_blank" class="privacy"
+              >Privacyverklaring</a
+            >
             <p>&copy; 2026 Scouts Sint-Joris Aalst. Alle rechten voorbehouden.</p>
             <a href="https://lordicon.com/">Animated icons by Lordicon.com</a>
           </div>
         </div>
       </section>
+
+      <div id="cookie-modal" class="vds-cookie-modal">
+        <div class="vds-container">
+          <h2 class="vds-title">Scouts Sint-Joris gebruikt cookies om uw surfervaring te verbeteren.</h2>
+          <p class="vds-text">
+            Sommige cookies zijn noodzakelijk om de website optimaal te laten functioneren. Andere cookies zijn
+            optioneel. Als u op ‘Alle cookies aanvaarden’ klikt, aanvaardt u ook de optionele cookies. Meer info leest u
+            in onze <a href="pdf/Privacyverklaring%20Scouts%20Sint-Joris.pdf" target="_blank">privacyverklaring</a>.
+          </p>
+          <div class="vds-actions">
+            <button class="vds-btn vds-btn-primary" onclick="acceptAll()">Alle cookies aanvaarden</button>
+            <button class="vds-btn vds-btn-secondary" onclick="acceptNecessary()">Enkel noodzakelijke</button>
+          </div>
+          <div class="vds-accordion">
+            <span class="vds-accordion-toggle" onclick="togglePreferences()">Cookievoorkeuren beheren</span>
+            <div id="vds-prefs" class="vds-preferences">
+              <div class="vds-option">
+                <label><input type="checkbox" checked disabled /> Noodzakelijke cookies</label>
+                <span>Deze cookies zijn vereist voor de werking van de site en uw privacy-instellingen.</span>
+              </div>
+              <div class="vds-option">
+                <label
+                  ><input type="checkbox" id="pref-analytics" /> Analytische cookies (Google Analytics & Microsoft
+                  Clarity)</label
+                >
+                <span>Hiermee meten we anoniem het bezoek op de website.</span>
+              </div>
+              <button class="vds-btn vds-btn-primary" style="margin-top: 1rem" onclick="savePreferences()">
+                Voorkeuren opslaan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js" defer></script>

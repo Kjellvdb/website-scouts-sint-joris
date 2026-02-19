@@ -18,6 +18,9 @@ main .contact-wrapper {
 }
 main .contact-info {
   background-image: url('../img/bg-texture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow:

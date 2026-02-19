@@ -11,6 +11,9 @@ main .paalsteek-overzicht {
 }
 main .paalsteek-tak {
   background-image: url('../img/bg-texture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 1.5rem;
   border-radius: 1rem;
 }

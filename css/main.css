@@ -20,17 +20,17 @@ html {
 /* Font Styles */
 :root {
   --primary-text-color: #2e2e2e;
-  --secondary-text-color: black;
+  --secondary-text-color: #000000;
   --white-text-color: #ffffff;
   --primary-green-color: #7b8f1c;
   --secondary-green-color: #2f6b2f;
   --primary-red-color: #c0392b;
-  --primary-background-color: #fff;
+  --primary-background-color: #ffffff;
   --secondary-background-color: #f2f2f2;
   --primary-shadow-color: rgba(51, 50, 50, 0.05);
   --secondary-shadow-color: rgba(0, 0, 0, 0.1);
   --google-agenda-color: #f0f4f9;
-  --form-border-color: #ccc;
+  --form-border-color: #cccccc;
   --carousel-primary-button-color: rgba(0, 0, 0, 0.45);
   --carousel-secondary-button-color: rgba(0, 0, 0, 0.7);
   --warning-text-color: #fff9e6;
@@ -163,6 +163,9 @@ footer section {
 }
 .footer-box {
   background-image: url('../img/bg-texture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   max-width: 75%;
   padding: 2rem;
   margin: 0 auto;
@@ -236,6 +239,93 @@ footer section {
 }
 .footer-bottom a:last-of-type {
   display: none;
+}
+
+/* Cookie Modal Styles */
+.vds-cookie-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  border-top: 4px solid #ffe615;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem 0;
+  display: none;
+}
+.vds-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: 'Flanders Art Sans', sans-serif;
+}
+.vds-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333332;
+}
+.vds-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #595958;
+  line-height: 1.6;
+}
+.vds-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.vds-btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #0055cc;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.vds-btn-primary {
+  background: #0055cc;
+  color: #fff;
+}
+.vds-btn-secondary {
+  background: #fff;
+  color: #0055cc;
+}
+.vds-btn:hover {
+  background: #003bb0;
+  color: #fff;
+}
+.vds-accordion {
+  border-top: 1px solid #d8d8d7;
+  padding-top: 1rem;
+}
+.vds-accordion-toggle {
+  color: #0055cc;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.vds-preferences {
+  display: none;
+  margin-top: 1rem;
+  background: #f3f3f3;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+.vds-option {
+  margin-bottom: 1rem;
+}
+.vds-option label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.vds-option span {
+  font-size: 0.875rem;
+  color: #595958;
 }
 
 /* Responsive design */
