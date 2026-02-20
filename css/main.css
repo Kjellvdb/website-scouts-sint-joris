@@ -35,6 +35,11 @@ html {
   --carousel-secondary-button-color: rgba(0, 0, 0, 0.7);
   --warning-text-color: #fff9e6;
   --warning-background-color: #ffcc00;
+  --cookies-text-color: #595958;
+  --cookies-primary-button-color: #0055cc;
+  --cookies-secondary-button-color: #003bb0;
+  --accordion-border-color: #d8d8d7;
+  --lightbox-background-color: rgba(0, 0, 0, 0.9);
 }
 
 h1 {
@@ -247,29 +252,28 @@ footer section {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #fff;
-  z-index: 9999;
-  border-top: 4px solid #ffe615;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  background: var(--primary-background-color);
+  border-top: 5px solid var(--warning-background-color);
+  box-shadow:
+    0 4px 6px var(--primary-shadow-color),
+    0 5px 15px var(--secondary-shadow-color);
   padding: 2rem 0;
   display: none;
 }
 .vds-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  font-family: 'Flanders Art Sans', sans-serif;
 }
 .vds-title {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #333332;
 }
 .vds-text {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #595958;
+  color: var(--cookies-text-color);
   line-height: 1.6;
 }
 .vds-actions {
@@ -282,28 +286,28 @@ footer section {
   padding: 0.5rem 1.5rem;
   font-weight: 700;
   cursor: pointer;
-  border: 2px solid #0055cc;
+  border: 2px solid var(--cookies-primary-button-color);
   border-radius: 3px;
   transition: 0.2s;
 }
 .vds-btn-primary {
-  background: #0055cc;
-  color: #fff;
+  color: var(--white-text-color);
+  background: var(--cookies-primary-button-color);
 }
 .vds-btn-secondary {
-  background: #fff;
-  color: #0055cc;
+  color: var(--cookies-primary-button-color);
+  background: var(--primary-background-color);
 }
 .vds-btn:hover {
-  background: #003bb0;
-  color: #fff;
+  color: var(--primary-background-color);
+  background: var(--cookies-secondary-button-color);
 }
 .vds-accordion {
-  border-top: 1px solid #d8d8d7;
+  border-top: 1px solid var(--accordion-border-color);
   padding-top: 1rem;
 }
 .vds-accordion-toggle {
-  color: #0055cc;
+  color: var(--cookies-primary-button-color);
   cursor: pointer;
   text-decoration: underline;
   font-weight: 600;
@@ -311,7 +315,7 @@ footer section {
 .vds-preferences {
   display: none;
   margin-top: 1rem;
-  background: #f3f3f3;
+  background: var(--secondary-background-color);
   padding: 1.5rem;
   border-radius: 4px;
 }
@@ -325,7 +329,7 @@ footer section {
 }
 .vds-option span {
   font-size: 0.875rem;
-  color: #595958;
+  color: var(--cookies-text-color);
 }
 
 /* Responsive design */

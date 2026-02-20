@@ -266,7 +266,12 @@
               src="img/info/uniform.webp"
               alt="Schema van het uniform met de juiste plek voor alle tekens"
               loading="lazy"
+              onclick="openLightbox(this.src)"
             />
+            <div id="imageLightbox" class="lightbox" onclick="closeLightbox()">
+              <img id="lightboxImg" class="lightbox-img" />
+              <div id="lightboxCaption" class="lightbox-caption"></div>
+            </div>
             <p>
               <small><em>Tip: Bekijk dit schema goed voor je begint te naaien!</em></small>
             </p>
