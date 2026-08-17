@@ -12,9 +12,20 @@
     sans-serif;
   color: var(--primary-text-color);
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Font Styles */
@@ -40,6 +51,7 @@ html {
   --cookies-secondary-button-color: #003bb0;
   --accordion-border-color: #d8d8d7;
   --lightbox-background-color: rgba(0, 0, 0, 0.9);
+  --footer-color: #ccc;
 }
 
 h1 {
@@ -144,27 +156,34 @@ main {
   padding: 4rem 1.5rem;
   padding-top: 0;
   max-width: 1200px;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0 auto;
 }
 
 /* Footer Styles */
 .footer-divider {
-  background: linear-gradient(
-    to bottom,
-    rgba(123, 143, 28, 0) 0%,
-    rgba(123, 143, 28, 0.15) 40%,
-    rgba(123, 143, 28, 0.4) 65%,
-    rgba(123, 143, 28, 0.7) 85%,
-    var(--primary-green-color) 100%
-  );
+  position: relative;
+  z-index: 1;
+}
+.divider {
+  width: 100%;
+  height: 25%;
+  pointer-events: none;
+}
+.flipped {
+  transform: scaleX(-1) scaleY(-1);
 }
 footer img {
   width: 100%;
   height: auto;
 }
 footer section {
-  background-color: var(--primary-green-color);
+  background-image: url('../img/bg-texture.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 2rem 0;
+  margin-top: -5%;
+  position: relative;
 }
 .footer-box {
   background-image: url('../img/bg-texture.webp');
@@ -173,8 +192,12 @@ footer section {
   background-position: center;
   max-width: 75%;
   padding: 2rem;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
   border-radius: 1rem;
+  border: var(--footer-color) 1px solid;
+  box-shadow:
+    0 4px 6px var(--primary-shadow-color),
+    0 5px 15px var(--secondary-shadow-color);
 }
 .footer-content {
   display: grid;
@@ -202,11 +225,21 @@ footer section {
 .footer-left a:hover {
   text-decoration: underline;
 }
+.footer-left .info-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.3rem;
+}
+.footer-left .info-note svg {
+  display: block;
+  flex-shrink: 0;
+}
 .footer-left .note {
   font-size: 0.85rem;
   color: var(--primary-red-color);
   font-style: italic;
-  margin-top: 0.3rem;
+  margin-top: 0rem;
   font-weight: 500;
 }
 .footer-right iframe {
@@ -374,9 +407,16 @@ footer section {
   }
 }
 @media screen and (max-width: 770px) {
+  footer .footer-box {
+    width: calc(100% - 2rem);
+    max-width: none;
+    padding: 1.25rem;
+    margin: 3rem auto 0 auto;
+    box-sizing: border-box;
+  }
   footer .footer-content {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
   }
   .footer-left {
@@ -384,5 +424,13 @@ footer section {
   }
   .icon-wrapper {
     justify-content: center;
+  }
+  .footer-right {
+    width: 100%;
+    overflow: hidden;
+  }
+  .footer-right iframe {
+    width: 100%;
+    height: 220px;
   }
 }
