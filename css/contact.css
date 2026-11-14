@@ -127,6 +127,16 @@ main .form-message.error {
 }
 
 /* Responsive design */
+@media (min-width: 1800px) {
+  main .contact-wrapper {
+    max-width: 1400px;
+  }
+}
+@media (min-width: 2560px) {
+  main .contact-wrapper {
+    max-width: 1700px;
+  }
+}
 @media screen and (max-width: 1200px) {
   main p {
     font-size: 0.95em;

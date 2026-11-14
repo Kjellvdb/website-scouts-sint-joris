@@ -55,6 +55,24 @@ main .outro {
 }
 
 /* Responsive design */
+@media (min-width: 1800px) {
+  main .leiding-lijst {
+    max-width: 1400px;
+  }
+  main .leiding-info img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 2560px) {
+  main .leiding-lijst {
+    max-width: 1700px;
+  }
+  main .leiding-info img {
+    width: 200px;
+    height: 200px;
+  }
+}
 @media screen and (max-width: 1200px) {
   main p {
     font-size: 0.95em;

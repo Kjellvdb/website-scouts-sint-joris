@@ -39,7 +39,7 @@ main .agenda {
   text-align: center;
 }
 main .agenda-intro {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 5rem auto 3rem auto;
   text-align: center;
 }
@@ -61,6 +61,16 @@ main .agenda-embed {
 }
 
 /* Responsive design */
+@media (min-width: 1800px) {
+  main .agenda {
+    max-width: 1400px;
+  }
+}
+@media (min-width: 2560px) {
+  main .agenda {
+    max-width: 1700px;
+  }
+}
 @media screen and (max-width: 1200px) {
   main p {
     font-size: 0.95em;

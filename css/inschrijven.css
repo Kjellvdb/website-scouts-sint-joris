@@ -53,20 +53,26 @@ main .rekeningnummer {
   border-radius: 15px;
   margin: 0.5rem 0 1rem 0;
 }
-main .fiscale-waarschuwing {
+main .waarschuwing {
   background-color: var(--warning-text-color);
   border-left: var(--warning-background-color);
   padding: 1.5rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
 }
-main .fiscale-waarschuwing p {
+main .waarschuwing p {
   line-height: 1.5;
   padding-top: 0.5rem;
 }
 main .inschrijven {
   display: inline-block;
+}
+main .inschrijvingsformulier {
+  width: 100%;
   margin-top: 1rem;
+  border-radius: 0.5rem;
+  height: 85vh;
 }
 main a {
   color: var(--primary-green-color);

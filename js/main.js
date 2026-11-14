@@ -1,3 +1,7 @@
+document.querySelectorAll('.year').forEach((el) => {
+  el.textContent = new Date().getFullYear();
+});
+
 document.querySelectorAll('a.scroll-link').forEach((link) => {
   const targetId = link.dataset.target;
   if (targetId) {
