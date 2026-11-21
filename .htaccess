@@ -3,6 +3,7 @@
 # ========================================
 
 RewriteEngine On
+RewriteBase /
 
 # ------------------------------------------------
 # Allow access to sendmail.php (Apache 2.4)
@@ -24,15 +25,16 @@ RewriteRule ^(.*)$ https://scoutssintjoris.be/$1 [R=301,L]
 RewriteRule ^index\.html$ / [R=301,L]
 
 # ------------------------------------------------
-# Canonical: force .html in URLs
+# Redirect explicit .html requests to extensionless URL
 # ------------------------------------------------
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ $1.html [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+?)\.html$ /$1 [R=301,L]
 
 # ------------------------------------------------
-# Internally serve .html without showing it
+# Internally serve .html for clean URLs
 # ------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
